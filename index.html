@@ -1,37 +1,60 @@
 <!DOCTYPE HTML>
 <html lang="ja">
+
+	<!--head-->
 	<head>
-		<title>SuperConsole</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!--Details-->
+			<meta charset="utf-8"/>
+			<title>About | SuperConsole</title>
+			<link rel="shortcut icon" href="images/sc.icon.ico"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!--Info-->
+			<meta name="ROBOTS" content="INDEX, FOLLOW" />
+		    <meta name="description" content="Who is SuperConsole?" />
+		    <meta name="keywords" content="qzifyes, superconsole, spcn, spkn" />
+
+		<!--Styles-->
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+			<link rel="stylesheet" href="assets/css/main.css" />
+			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!--Script-->
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js"></script>
+			<script src="assets/js/spcn.react.js" type="text/babel"></script>
 	</head>
+
+	<!--body-->
 	<body class="is-loading">
 		<div id="wrapper">
+			<!--React-->
+				<header id="top_header"></header>
+				<nav id="sidebar"></nav>
+
+			<!--main-->
+			<section id="main">
 				<header>
-
+					<span class="avatar"><img src="images/avatar.jpg" style="height:150px;" alt="" /></span>
+					<h1>SuperConsole</h1>
+					<p>Music Producer & Web Designer</p>
 				</header>
-				<section id="main">
-					<header>
-						<span class="avatar"><img src="images/avatar.jpg" style="height:150px;" alt="" /></span>
-						<h1>SuperConsole</h1>
-						<p>Music Producer & Web Designer</p>
-					</header>
-					<footer>
-						<ul class="icons">
-							<li><a href="https://twitter.com/_superconsole" class="fa-twitter">Twitter</a></li>
-							<li><a href="https://soundcloud.com/superconsole" class="fa-soundcloud">Twitter</a></li>
-							<li><a href="#" class="fa-youtube">Twitter</a></li>
-						</ul>
-					</footer>
-				</section>
-
-				<footer id="footer">
-					<ul class="copyright">
-						<li>&copy; SuperConsole</li>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://twitter.com/_superconsole" class="fa-twitter"></a></li>
+						<li><a href="https://soundcloud.com/superconsole" class="fa-soundcloud"></a></li>
+						<li><a href="https://www.youtube.com/channel/UCtfFkG9H7xVMiPCcmGdpN_A" class="fa-youtube"></a></li>
+						<li><a href="https://github.com/SuperConsole" class="fa-github"></a></li>
 					</ul>
 				</footer>
+			</section>
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; SuperConsole</li>
+				</ul>
+			</footer>
 		</div>
 		<script>
 			if ('addEventListener' in window) {
