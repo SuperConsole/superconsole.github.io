@@ -3,7 +3,7 @@
 
 var TestClass = React.createClass({
     render: function(){
-        return <h1>Hello {this.props.text} !</h1>;
+        return <h1>{this.props.text}</h1>;
     }
 });
 
@@ -11,7 +11,7 @@ ReactDOM.render(
     React.createElement(
         TestClass,
         {
-            text:"React"
+            text:"Home"
         }
     ),
     document.getElementById('top_header')
