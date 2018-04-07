@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -21,7 +21,7 @@
 		font: inherit;
 		width: 100vw;
 		padding-top: 0.5em;
-		background: #fff;
+		background: #000;
 		opacity: 0.95;
 		cursor: default;
 		text-align: center;
@@ -88,7 +88,7 @@
 
 	body {
 		height: 100%;
-		background-color: #eee;
+		background-color: #000;
 	}
 
 		body:after {
@@ -101,7 +101,7 @@
 			height: inherit;
 			opacity: 0;
 			z-index: 1;
-			background-color: #ffffff;
+			background-color: #000;
 		}
 
 		body.is-loading:after {
@@ -111,8 +111,8 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #414f57;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		color: #fff;
+		font-family: 'Playfair Display', serif;
 		font-size: 14pt;
 		font-weight: 300;
 		line-height: 2;
@@ -142,7 +142,6 @@
 		-webkit-transition: color 0.2s ease, border-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-color 0.2s ease;
 		transition: color 0.2s ease, border-color 0.2s ease;
-		color: inherit;
 		text-decoration: none;
 	}
 
@@ -158,7 +157,7 @@
 		}
 
 	strong, b {
-		color: #313f47;
+		color: #fff;
 	}
 
 	em, i {
@@ -170,7 +169,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #313f47;
+		color: #fff;
 		line-height: 1.5;
 		margin: 0 0 0.75em 0;
 	}
@@ -308,7 +307,7 @@
 		}
 
 		.select-wrapper:before {
-			color: #c8cccf;
+			color: #000;
 			display: block;
 			height: 2.75em;
 			line-height: 2.75em;
@@ -507,8 +506,8 @@
 					display: block;
 					width: 3.75em;
 					height: 3.75em;
-					border-radius: 100%;
-					border: solid 1px #c8cccf;
+					border-radius: 5px;
+					border-bottom: solid 1px #bbb;
 					line-height: 3.75em;
 					overflow: hidden;
 					text-align: center;
@@ -526,8 +525,7 @@
 					}
 
 					ul.icons li a:before {
-						color: #ffffff;
-						text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+						color: #fff;
 					}
 
 					ul.icons li a:hover:before {
@@ -690,11 +688,11 @@
 		max-width: 100%;
 		min-width: 27em;
 		padding: 4.5em 3em 3em 3em ;
-		background: #fff;
-		border-radius: 15px;
-		opacity: 0.95;
+		background: #000;
+		opacity: 1;
 		cursor: default;
 		text-align: center;
+		height:100%;
 	}
 
 		#main .avatar {
@@ -706,8 +704,6 @@
 			#main .avatar img {
 				display: block;
 				margin: 0 auto;
-				border-radius: 100%;
-				box-shadow: 0 0 0 1.5em #ffffff;
 			}
 
 			#main .avatar:before {
@@ -716,10 +712,6 @@
 				position: absolute;
 				top: 50%;
 				left: -3em;
-				width: calc(100% + 6em);
-				height: 1px;
-				z-index: -1;
-				background: #c8cccf;
 			}
 
 		@media screen and (max-width: 480px) {
@@ -754,15 +746,15 @@
 		align-self: flex-end;
 		width: 100%;
 		padding: 1.5em 0 0 0;
-		color: rgba(255, 255, 255, 0.75);
+		color: rgba(255, 255, 255, 0.4);
 		cursor: default;
-		text-align: center;
+		text-align: right;
 	}
 
 		#footer .copyright {
 			margin: 0;
 			padding: 0;
-			font-size: 0.9em;
+			font-size: 0.6em;
 			list-style: none;
 		}
 
