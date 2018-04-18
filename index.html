@@ -5,22 +5,25 @@
 	<head>
 		<!--Details-->
 			<meta charset="utf-8"/>
-			<title>About | SuperConsole</title>
+			<title>SuperConsole</title>
 			<link rel="shortcut icon" href="images/sc.icon.ico"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!--Info-->
 			<meta name="ROBOTS" content="INDEX, FOLLOW" />
 		    <meta name="description" content="error-code:404 Not Found" />
-		    <meta name="keywords" content="qzifyes, superconsole, spcn, spkn" />
+		    <meta name="keywords" content="superconsole, qzifyes, spcn, spkn" />
 
 		<!--Styles-->
 		<meta http-equiv="Content-Style-Type" content="text/css" />
 			<link rel="stylesheet" href="assets/css/main.css" />
+			<link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/vhs/0.1.0/vhs.min.css">
 			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<!--Script-->
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="assets/js/spcn.jquery.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js"></script>
@@ -29,20 +32,39 @@
 
 	<!--body-->
 	<body class="is-loading">
-
 		<div id="wrapper">
-			<header>
+			<header class="top-bar">
 				<table>
 					<tr>
 						<!--SideBar-->
-							<td><div class="side-bar"><h1>≡</h1></div></td>
+							<td class="side-bar"><h1>≡</h1></td>
 						<!--React-->
-							<td><div id="top_header"></div></td>
+							<td><div id="main_header"></div></td>
+
+						<td><div class="space"></div></td>
 					</tr>
 				</table>
 			</header>
+
+			<div class="menu">
+				<table>
+					<tr>
+						<td><a href="./">Home　　　</a></td>
+					</tr>
+					<tr>
+						<td><a href="#profile">Profile　　　</a></td>
+					</tr>
+					<tr>
+						<td><a href="#blog">Blog　　　</a></td>
+					</tr>
+					<tr>
+						<td><a href="#contact">Contact　　　</a></td>
+					</tr>
+				</table>
+			</div>
+
 			<!--main-->
-			<section id="main">
+			<div id="main">
 				<header>
 					<span class="avatar"><img src="images/avatar.jpg" style="height:150px;" alt="" /></span>
 					<h1>SuperConsole</h1>
@@ -56,7 +78,7 @@
 						<li><a href="https://github.com/SuperConsole" class="fa-github"></a></li>
 					</ul>
 				</footer>
-			</section>
+			</div>
 			<footer id="footer">
 				<ul class="copyright">
 					<li>Copyright&copy; SuperConsole 2018 All Rights Reserved.</li>

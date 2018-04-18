@@ -20,8 +20,8 @@
 		display: block;
 	}
 
-	header#top_header{
-		position: fixed;
+	header#main_header{
+		position: absolute;
 		margin-top: 0;
 		font: inherit;
 		width: 100vw;
@@ -512,7 +512,7 @@
 					width: 3.75em;
 					height: 3.75em;
 					border-radius: 5px;
-					border-bottom: solid 1px #bbb;
+					border-bottom: solid 1px #000;
 					line-height: 3.75em;
 					overflow: hidden;
 					text-align: center;
@@ -550,7 +550,7 @@
 					}
 
 					ul.icons li a:hover {
-						border-color: #000;
+						border-color: #ddd;
 					}
 
 			@media screen and (max-width: 480px) {
@@ -751,7 +751,7 @@
 		align-self: flex-end;
 		width: 100%;
 		padding: 1.5em 0 0 0;
-		color: rgba(255, 255, 255, 0.4);
+		color: rgba(255, 255, 255, 0.3);
 		cursor: default;
 		text-align: right;
 	}
@@ -759,7 +759,7 @@
 		#footer .copyright {
 			margin: 0;
 			padding: 0;
-			font-size: 0.6em;
+			font-size: 0.5em;
 			list-style: none;
 		}
 
@@ -816,7 +816,6 @@
 			#wrapper {
 				padding: 0.75em;
 			}
-
 		}
 
 		body.is-ie #wrapper {
@@ -824,6 +823,7 @@
 		}
 
 		.side-bar{
+			cursor : cell;
 			margin: 1em;
 			width: 30px;
 			height: 40px;
@@ -832,36 +832,46 @@
 			top: 0;
 			left: 0;
 		}
-		.side-bar :hover{
-			z-index: 9;
-			transition:
-			-webkit-animation: spin 0.25s linear;
-    		-moz-animation: spin 0.25s linear;
-    		-ms-animation: spin 0.25s linear;
-    		-o-animation: spin 0.25s linear;
-    		animation: spin 0.25s linear;
-		}
-		@-webkit-keyframes spin {
-			0% {-webkit-transform: rotate(0deg);}
-			100% {-webkit-transform: rotate(180deg);}
-		}
-		@-moz-keyframes spin {
-			0% {-moz-transform: rotate(0deg);}
-			100% {-moz-transform: rotate(180deg);}
-		}
-		@-ms-keyframes spin {
-			0% {-ms-transform: rotate(0deg);}
-			100% {-ms-transform: rotate(180deg);}
-		}
-		@-o-keyframes spin {
-			0% {-o-transform: rotate(0deg);}
-			100% {-o-transform: rotate(180deg);}
-		}
-		@keyframes spin {
-			0% {transform: rotate(0deg);}
-			100% {transform: rotate(180deg);}
-		}
+			.side-bar :hover{
+				color: #888;
+			}
+			.side-bar :active{
+				color: #222;
+			}
 
-#top_header{
+#main_header{
 	text-align: center;
 }
+
+.space{
+	width: 200px;
+}
+
+.menu{
+	display: none;
+	position: auto;
+	background-color: #000;
+	top:3em;
+	left: calc(50%-300px);
+	font-size: 3em;
+	text-align: left;
+}
+	.menu tr :hover{
+		cursor: pointer;
+		color: #777;
+	}
+	.menu tr :active{
+		cursor: pointer;
+		color: #222;
+	}
+
+.top-bar{
+	position: fixed;
+	top: 3em;
+}
+
+/*リンクの修飾を消す*/
+a:link { color:#fff; text-decoration:none }
+a:visited { color:#fff; text-decoration:none }
+a:hover { color:#fff; text-decoration:none }
+a:active { color:#fff; text-decoration:none }
