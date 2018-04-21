@@ -31,65 +31,28 @@
 	</head>
 
 	<!--body-->
-	<body class="is-loading">
+	<body>
 		<div id="wrapper">
 			<header class="top-bar">
 				<table>
 					<tr>
-						<!--SideBar-->
-							<td class="side-bar"><h1>≡</h1></td>
-						<!--React-->
+						<!--React / Virtual DOM-->
+							<td id="side-button" class="side-bar"><h1>≡</h1></td>
 							<td><div id="main_header"></div></td>
-
 						<td><div class="space"></div></td>
 					</tr>
 				</table>
 			</header>
 
-			<div class="menu">
-				<table>
-					<tr>
-						<td><a href="./">Home　　　</a></td>
-					</tr>
-					<tr>
-						<td><a href="#profile">Profile　　　</a></td>
-					</tr>
-					<tr>
-						<td><a href="#blog">Blog　　　</a></td>
-					</tr>
-					<tr>
-						<td><a href="#contact">Contact　　　</a></td>
-					</tr>
-				</table>
-			</div>
+			<!--React / Virtual DOM-->
+			<div id="side-menu" class="menu"></div>
+			<div id="main"></div>
 
-			<!--main-->
-			<div id="main">
-				<header>
-					<span class="avatar"><img src="images/avatar.jpg" style="height:150px;" alt="" /></span>
-					<h1>SuperConsole</h1>
-					<div style="margin-top:3em;"></div>
-				</header>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://twitter.com/_superconsole" class="fa-twitter"></a></li>
-						<li><a href="https://soundcloud.com/superconsole" class="fa-soundcloud"></a></li>
-						<li><a href="https://www.youtube.com/channel/UCtfFkG9H7xVMiPCcmGdpN_A" class="fa-youtube"></a></li>
-						<li><a href="https://github.com/SuperConsole" class="fa-github"></a></li>
-					</ul>
-				</footer>
-			</div>
 			<footer id="footer">
 				<ul class="copyright">
 					<li>Copyright&copy; SuperConsole 2018 All Rights Reserved.</li>
 				</ul>
 			</footer>
 		</div>
-		<script>
-			if ('addEventListener' in window) {
-				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-			}
-		</script>
 	</body>
 </html>
