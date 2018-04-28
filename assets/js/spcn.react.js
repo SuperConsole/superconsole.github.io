@@ -52,7 +52,18 @@ var reactMain = React.createClass({
     }
 });
 
+var menuButton = React.createClass({
+    render: function(){
+        return(
+            <h1>≡</h1>
+        );
+    }
+});
 
+ReactDOM.render(
+    React.createElement(menuButton),
+    document.getElementById('side-button')
+);
 
 ReactDOM.render(
     React.createElement(title),
