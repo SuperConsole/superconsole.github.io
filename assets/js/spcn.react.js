@@ -35,7 +35,7 @@ var reactMain = React.createClass({
         return(
             <div>
                 <header>
-                    <span className="avatar"><img src="images/avatar.jpg" style={{height:"150px"}}/></span>
+                    <span className="avatar"><img src="images/avatar.png" style={{height:"150px"}}/></span>
                     <h1>SuperConsole</h1>
                     <div style={{marginTop:"3em"}}></div>
                 </header>
