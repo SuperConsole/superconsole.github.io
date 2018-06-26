@@ -18,4 +18,7 @@ $(function(){
             toggle=true;
         }
     });
+    $("#menuButton").click(function () {
+        location.reload();
+    });
 });
