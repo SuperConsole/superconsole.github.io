@@ -1,7 +1,7 @@
 //jQuery
 //Product by SuperConsole®.
 
-//サブメニューのトグル化
+//toggle SubMenu
 var toggle = true;
 
 $(function(){
