@@ -1,47 +1,35 @@
-//React.js
-//Product by SuperConsole®.
-
-var title = React.createClass({
-    render: function(){
-        return(
-            <h1>Home</h1>
-        );
+class Title extends React.Component{
+    render(){
+        return <h1>Home</h1>;
     }
-});
+}
 
-var sideMenu = React.createClass({
-    render: function(){
+class SideMenu extends React.Component{
+    onClick(){
+        location.reload();
+    }
+    render(){
         return(
             <table>
                 <tr>
                     <td><a href="./">Home　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#profile" id="menuButton">Profile　　　</a></td>
+                    <td><a href="#profile" id="menuButton" onClick={()=>this.onClick()}>Profile　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#blog" id="menuButton">Blog　　　</a></td>
+                    <td><a href="#blog" id="menuButton" onClick={()=>this.onClick()}>Blog　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#contact" id="menuButton">Contact　　　</a></td>
+                    <td><a href="#contact" id="menuButton" onClick={()=>this.onClick()}>Contact　　　</a></td>
                 </tr>
             </table>
         );
     }
-});
+}
 
-var reactMain = React.createClass({
-    getInitialState: function(){
-        return{
-            wrapID:'0'
-        };
-    },
-    setState: function(n){
-        this.setState({
-            wrapID:n
-        });
-    },
-    render: function(){
+class ReactMain extends React.Component{
+    render(){
         return(
             <div>
                 <header>
@@ -60,28 +48,30 @@ var reactMain = React.createClass({
             </div>
         );
     }
-});
+}
 
-var menuButton = React.createClass({
-    render: function(){
-        return(
-            <h1>≡</h1>
-        );
+let tgl=true;
+class MenuButton extends React.Component{
+    constructor(props){
+        super(props);
     }
-});
+    onClick(){
+        if(tgl){
+            $("#main").fadeOut(100);
+            setTimeout(function(){$(".menu").fadeIn(100);$("#main").hide()},100);
+        }else{
+            $(".menu").fadeOut(100);
+            setTimeout(function(){$("#main").fadeIn(100);$(".menu").hide()},100);
+        }
+        tgl=!tgl;
+    }
+    render(){
+        return<h1 onClick={()=>this.onClick()}>≡</h1>
+    }
+}
 
-var reactProfile = React.createClass({
-    getInitialState: function(){
-        return{
-            wrapID:'1'
-        };
-    },
-    setState: function(n){
-        this.setState({
-            wrapID:n
-        });
-    },
-    render: function(){
+class ReactProfile extends React.Component{
+    render(){
         return(
             <div>
                 <table style={{textAlign:"left"}}>
@@ -134,43 +124,93 @@ var reactProfile = React.createClass({
             </div>
         );
     }
-});
+}
 
-var reactWrap = React.createClass({
-    render: function(){
+class ReactContact extends React.Component{
+    render(){
+        return(
+            <div>
+                <table style={{textAlign:"left"}}>
+                    <tr>
+                        <td>[仕事(曲の制作やデザイン)の依頼はGmailからお願いします)]</td>
+                    </tr>
+                    <tr>
+                        <td style={{height:"1em"}}></td>
+                    </tr>
+                    <tr>
+                        <td style={{height:"1em"}}></td>
+                    </tr>
+                    <tr>
+                        <td>/- - -</td>
+                    </tr>
+                    <tr>
+                        <td>- Gmail</td>
+                    </tr>
+                    <tr>
+                        <td>　　SuperConsoleDJEM[at]gmail.com ※[at] -> @</td>
+                    </tr>
+                    <tr>
+                        <td>- Instant-mail</td>
+                    </tr>
+                    <tr>
+                        <td>　　SuperConsole[at]via.tokyo.jp</td>
+                    </tr>
+                    <tr>
+                        <td>- Other</td>
+                    </tr>
+                    <tr>
+                        <td>　　Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>/- - -</td>
+                    </tr>
+                </table>
+            </div>
+        );
+    }
+}
+
+class ReactWrap extends React.Component{
+    render(){
         var tmp;
         switch(location.hash){
             case "#profile":
-                tmp = reactProfile;
+                tmp = ReactProfile;
+                break;
+            case "#contact":
+                tmp = ReactContact;
+                break;
+            case "#blog":
+                tmp="";
+                location.href="./blog/";
                 break;
             default:
-                tmp = reactMain;
+                tmp = ReactMain;
                 break;
         }
         return(
             React.createElement(tmp)
         );
     }
-});
+}
 
 ReactDOM.render(
-    React.createElement(menuButton),
-    document.getElementById('side-button')
+    <MenuButton />,
+    document.getElementById("side-button"));
+
+ReactDOM.render(
+    <Title />,
+    document.getElementById("main_header")
 );
 
 ReactDOM.render(
-    React.createElement(title),
-    document.getElementById('main_header')
+    <SideMenu />,
+    document.getElementById("side-menu")
 );
 
 ReactDOM.render(
-    React.createElement(sideMenu),
-    document.getElementById('side-menu')
-);
-
-ReactDOM.render(
-    React.createElement(reactWrap),
-    document.getElementById('main')
+    <ReactWrap />,
+    document.getElementById("main")
 );
 
 function age() {
