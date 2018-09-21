@@ -18,7 +18,7 @@ class SideMenu extends React.Component{
                     <td><a href="#profile" id="menuButton" onClick={()=>this.onClick()}>Profile　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#blog" id="menuButton" onClick={()=>this.onClick()}>Blog　　　</a></td>
+                    <td><a href="#blog" id="menuButton" onClick={()=>this.onClick()}>Diary　　　</a></td>
                 </tr>
                 <tr>
                     <td><a href="#contact" id="menuButton" onClick={()=>this.onClick()}>Contact　　　</a></td>
@@ -182,7 +182,7 @@ class ReactWrap extends React.Component{
                 break;
             case "#blog":
                 tmp="";
-                location.href="./blog/";
+                location.href="https://github.com/SuperConsole/SpCn-Diary/blob/master/Diary.md";
                 break;
             default:
                 tmp = ReactMain;
