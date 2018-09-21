@@ -6,7 +6,7 @@ class Title extends React.Component{
 
 class SideMenu extends React.Component{
     onClick(){
-        location.reload();
+        setTimeout(function(){location.reload();},300);
     }
     render(){
         return(
@@ -33,7 +33,7 @@ class ReactMain extends React.Component{
         return(
             <div>
                 <header>
-                    <span className="avatar"><img src="images/avatar.png" style={{height:"275px"}}/></span>
+                    <span className="avatar"><img src="images/avatar.png" style={{height:"24vw"}}/></span>
                     <h1>SuperConsole</h1>
                     <div style={{marginTop:"3em"}}></div>
                 </header>
