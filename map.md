@@ -2,6 +2,6 @@
 ```
 Home
   |_Profile -> Details
-  |_Blog -> Blog Page
+  |_Blog -> Github -＞ SpCn-Diary
   |_Contact -> Gmail, and more Mail...
 ```
