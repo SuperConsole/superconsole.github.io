@@ -33,7 +33,7 @@ class ReactMain extends React.Component{
         return(
             <div>
                 <header>
-                    <span className="avatar"><img src="images/avatar.png" style={{height:"18vw"}}/></span>
+                    <span className="avatar"><img src="images/avatar.png" style={{height:"300px"}}/></span>
                     <h1>SuperConsole</h1>
                     <div style={{marginTop:"3em"}}></div>
                 </header>
