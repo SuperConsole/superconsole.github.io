@@ -6,7 +6,7 @@ class Title extends React.Component{
 
 class SideMenu extends React.Component{
     onClick(){
-        setTimeout(location.reload(),5);
+        setTimeout(location.reload(),50);
     }
     render(){
         return(
