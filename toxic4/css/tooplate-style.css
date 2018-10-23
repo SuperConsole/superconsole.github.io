@@ -35,12 +35,6 @@ html, body {
     }
 }
 
-@media (max-width: 980px) {
-    .container-work{
-        margin-top: 3em;
-    }
-}
-
 #conHome{
     margin: 0 !important;
 }
@@ -342,6 +336,19 @@ a:hover, a:active, a:focus {
 
 }
 
+.DLCard{
+    color:#eee;
+    opacity: 0.81;
+    background: #555;
+    background: -webkit-linear-gradient(left, #000, #26598c);
+    background: -o-linear-gradient(left, #000, #26598c);
+    background: linear-gradient(to right, #000, #26598c);
+}
+
+.DLCard:hover{
+    background: #000;
+}
+
 table.tracks tr:hover{
     background-color: #000;
     cursor: pointer;
@@ -377,6 +384,10 @@ td{
     font-weight: bold;
     border-top: none !important;
     border-left: solid 2px #3f91a3;
+}
+
+@media (max-width: 1300px){
+    
 }
 /*---------------------------------------
   Mobile Responsive styles
