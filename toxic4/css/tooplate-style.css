@@ -381,7 +381,7 @@ table.tracks tr:nth-child(1):active{
 
 #work {
     opacity: 1;
-    background: #000f1d;
+    background: url(../images/jacket_blur.jpg);
   height: 100vh;
 }
 
