@@ -207,7 +207,10 @@ a:hover, a:active, a:focus {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background: none repeat scroll 0 0 #ffffff;
+  background: none repeat scroll 0 0 #000;
+  background: -webkit-linear-gradient(left, #000, #215389);
+  background: -o-linear-gradient(left, #000, #215389);
+  background: linear-gradient(to right, #000, #215389);
 }
 
 .spinner {
@@ -220,10 +223,13 @@ a:hover, a:active, a:focus {
   content: '';
   box-sizing: border-box;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 65px;
-  height: 65px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60px;
+  height: 60px;
   margin-top: -10px;
   margin-left: -10px;
   border-radius: 50%;
@@ -387,7 +393,7 @@ td{
 }
 
 @media (max-width: 1300px){
-    
+
 }
 /*---------------------------------------
   Mobile Responsive styles
