@@ -26,25 +26,25 @@
                 SC_frame.seekTo(0);
             });
             $("#tr02").click(function(){
-                SC_frame.seekTo(10000);
+                SC_frame.seekTo(57000);
             });
             $("#tr03").click(function(){
-                SC_frame.seekTo(20000);
+                SC_frame.seekTo(122000);
             });
             $("#tr04").click(function(){
-                SC_frame.seekTo(30000);
+                SC_frame.seekTo(204000);
             });
             $("#tr05").click(function(){
-                SC_frame.seekTo(40000);
+                SC_frame.seekTo(262000);
             });
             $("#tr06").click(function(){
-                SC_frame.seekTo(50000);
+                SC_frame.seekTo(325000);
             });
             $("#tr07").click(function(){
-                SC_frame.seekTo(60000);
+                SC_frame.seekTo(391000);
             });
             $("#tr08").click(function(){
-                SC_frame.seekTo(70000);
+                SC_frame.seekTo(451000);
             });
         });
 
