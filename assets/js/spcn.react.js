@@ -1,8 +1,6 @@
-class Title extends React.Component{
-    render(){
-        return <h1>Home</h1>;
-    }
-}
+//class Wrap extends React.Component{
+
+//}
 
 class SideMenu extends React.Component{
     onClick(){
@@ -194,14 +192,15 @@ class ReactWrap extends React.Component{
     }
 }
 
+//ReactDOM.render(
+//    <Wrap />,
+//    document.getElementById("wrap")
+//);
+
 ReactDOM.render(
     <MenuButton />,
     document.getElementById("side-button"));
 
-ReactDOM.render(
-    <Title />,
-    document.getElementById("main_header")
-);
 
 ReactDOM.render(
     <SideMenu />,
