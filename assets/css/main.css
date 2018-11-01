@@ -23,7 +23,7 @@ header {
     margin: 2em 0 0
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
 	header {
 			margin: 0 0 0
 	}
@@ -62,7 +62,7 @@ table {
     border-spacing: 0
 }
 
-@media screen and (max-width:1400px){
+@media screen and (max-width:1600px){
 	table.message {
 	    font-size: 15px;
 	}
@@ -74,7 +74,7 @@ table {
     height: 300px!important
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
     #logoPic {
         width: 175px!important;
         height: 175px!important
@@ -202,7 +202,7 @@ h3,h4,h5,h6 {
     font-size: 1em
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
     h1 {
         font-size: 1.8em;
     }
@@ -463,7 +463,7 @@ ul.icons li a {
     white-space: nowrap
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
     ul.icons li a {
         font-size: 14px;
     }
@@ -596,7 +596,7 @@ dl dd {
     height: 100%
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
     #main {
         padding: 2em 2em 0.5em
     }
@@ -634,7 +634,7 @@ dl dd {
 	margin-top:3em;
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
 	.avatar_margin{
 		margin-top:0;
 	}
@@ -763,7 +763,7 @@ body.is-ie #wrapper {
     color: #222
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
 	.menu {
 	    font-size: 2em;
 	}
