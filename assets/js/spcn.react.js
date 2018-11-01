@@ -33,7 +33,7 @@ class ReactMain extends React.Component{
                 <header>
                     <span className="avatar"><img src="images/avatar.png" id="logoPic"/></span>
                     <h1>SuperConsole</h1>
-                    <div style={{marginTop:"3em"}}></div>
+                    <div className="avatar_margin"></div>
                 </header>
                 <footer>
                     <ul className="icons">
@@ -72,7 +72,7 @@ class ReactProfile extends React.Component{
     render(){
         return(
             <div>
-                <table style={{textAlign:"left"}}>
+                <table className="message" style={{textAlign:"left"}}>
                     <tr>
                         <td>- NAME</td>
                     </tr>
@@ -128,7 +128,7 @@ class ReactContact extends React.Component{
     render(){
         return(
             <div>
-                <table style={{textAlign:"left"}}>
+                <table className="message" style={{textAlign:"left"}}>
                     <tr>
                         <td>[仕事(曲の制作やデザイン)の依頼はGmailからお願いします)]</td>
                     </tr>
