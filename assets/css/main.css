@@ -780,3 +780,8 @@ a:active,a:hover,a:link,a:visited {
     color: #fff;
     text-decoration: none
 }
+
+#article{
+    text-align: left;
+    line-height: 1.8;
+}
