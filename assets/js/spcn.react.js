@@ -4,22 +4,23 @@
 
 class SideMenu extends React.Component{
     onClick(){
-        setTimeout(location.reload(),200);
+        setTimeout(()=>{location.reload()},300);
+        setTimeout(()=>{location.reload()},300);
     }
     render(){
         return(
             <table>
                 <tr>
-                    <td><a href="./">Home　　　</a></td>
+                    <td><a href="./" onClick={()=>{this.onClick()}}>Home　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#profile" id="menuButton" onClick={()=>this.onClick()}>Profile　　　</a></td>
+                    <td><a href="#profile" id="menuButton" onClick={()=>{this.onClick()()}}>Profile　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#blog" id="menuButton" onClick={()=>this.onClick()}>Diary　　　</a></td>
+                    <td><a href="#diary" id="menuButton" onClick={()=>{this.onClick()}}>Diary　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#contact" id="menuButton" onClick={()=>this.onClick()}>Contact　　　</a></td>
+                    <td><a href="#contact" id="menuButton" onClick={()=>{this.onClick()}}>Contact　　　</a></td>
                 </tr>
             </table>
         );
@@ -48,20 +49,22 @@ class ReactMain extends React.Component{
     }
 }
 
-let tgl=true;
 class MenuButton extends React.Component{
     constructor(props){
         super(props);
+        this.state={
+            toggle: true,
+        }
     }
     onClick(){
-        if(tgl){
+        if(this.state.toggle){
             $("#main").fadeOut(100);
-            setTimeout(function(){$(".menu").fadeIn(100);$("#main").hide()},100);
+            setTimeout( ()=>{$(".menu").fadeIn(100);$("#main").hide()},100);
         }else{
             $(".menu").fadeOut(100);
-            setTimeout(function(){$("#main").fadeIn(100);$(".menu").hide()},100);
+            setTimeout( ()=>{$("#main").fadeIn(100);$(".menu").hide()},100);
         }
-        tgl=!tgl;
+        this.setState({toggle: !this.state.toggle});
     }
     render(){
         return<h1 onClick={()=>this.onClick()}>≡</h1>
@@ -156,7 +159,7 @@ class ReactContact extends React.Component{
             <div>
                 <table className="message" style={{textAlign:"left"}}>
                     <tr>
-                        <td>[仕事(曲の制作やデザイン)の依頼はGmailからお願いします)]</td>
+                        <td>曲やデザインの制作依頼はGmailかTwitterのDMへお願いします。</td>
                     </tr>
                     <tr>
                         <td style={{height:"1em"}}></td>
@@ -168,7 +171,7 @@ class ReactContact extends React.Component{
                         <td>- Gmail</td>
                     </tr>
                     <tr>
-                        <td>　　SuperConsoleDJEM[at]gmail.com ※[at] -> @</td>
+                        <td>　　SuperConsoleDJEM[at]gmail.com</td>
                     </tr>
                     <tr>
                         <td>- Instant-mail</td>
@@ -189,7 +192,13 @@ class ReactContact extends React.Component{
 }
 
 class ReactWrap extends React.Component{
-    render(){
+    constructor(props){
+        super(props);
+        this.state={
+            wrapTmp:ReactMain,
+        }
+    }
+    componentWillMount(){
         var tmp;
         switch(location.hash){
             case "#profile":
@@ -198,16 +207,18 @@ class ReactWrap extends React.Component{
             case "#contact":
                 tmp = ReactContact;
                 break;
-            case "#blog":
+            case "#diary":
                 tmp = ReactMarkdown;
                 break;
             default:
                 tmp = ReactMain;
                 break;
         }
-        return(
-            React.createElement(tmp)
-        );
+        this.setState({wrapTmp:tmp});
+    }
+    
+    render(){
+        return <this.state.wrapTmp />
     }
 }
 
