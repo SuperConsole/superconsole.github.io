@@ -4,7 +4,7 @@
 
 class SideMenu extends React.Component{
     onClick(){
-        setTimeout(location.reload(),50);
+        setTimeout(location.reload(),200);
     }
     render(){
         return(
@@ -124,6 +124,32 @@ class ReactProfile extends React.Component{
     }
 }
 
+
+
+class ReactMarkdown extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+          article: null,
+        };
+        (async () =>{
+            try{
+                var response = await fetch("./test.md", {method: "GET"});
+                var responseText = await response.text();
+                var md = responseText;
+                var parseMd = marked(md);
+                this.setState({article:parseMd});
+            }catch(e){
+                console.log("failured");
+            }
+        })();
+    }
+    render(){
+        return(
+            <div id="article" dangerouslySetInnerHTML={{__html: this.state.article}}></div>
+        );
+    }
+}
 class ReactContact extends React.Component{
     render(){
         return(
@@ -137,9 +163,6 @@ class ReactContact extends React.Component{
                     </tr>
                     <tr>
                         <td style={{height:"1em"}}></td>
-                    </tr>
-                    <tr>
-                        <td>/- - -</td>
                     </tr>
                     <tr>
                         <td>- Gmail</td>
@@ -159,9 +182,6 @@ class ReactContact extends React.Component{
                     <tr>
                         <td>　　Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)</td>
                     </tr>
-                    <tr>
-                        <td>/- - -</td>
-                    </tr>
                 </table>
             </div>
         );
@@ -179,8 +199,7 @@ class ReactWrap extends React.Component{
                 tmp = ReactContact;
                 break;
             case "#blog":
-                tmp="";
-                location.href="https://github.com/SuperConsole/SpCn-Diary/blob/master/Diary.md";
+                tmp = ReactMarkdown;
                 break;
             default:
                 tmp = ReactMain;
