@@ -134,7 +134,7 @@ class ReactMarkdown extends React.Component{
         };
         (async () =>{
             try{
-                var response = await fetch("./test.md", {method: "GET"});
+                var response = await fetch("./diary/Diary.md", {method: "GET"});
                 var responseText = await response.text();
                 var md = responseText;
                 var parseMd = marked(md);
