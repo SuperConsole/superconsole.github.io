@@ -1,4 +1,3 @@
 [submodule "diary"]
 	path = diary
 	url = https://github.com/superconsole/SpCn-Diary
-	branch = master
