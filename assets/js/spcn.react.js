@@ -32,7 +32,7 @@ class ReactMain extends React.Component{
         return(
             <div>
                 <header>
-                    <span className="avatar"><img src="images/avatar.png" id="logoPic"/></span>
+                    <span className="avatar"><img src="images/avatar.svg" id="logoPic"/></span>
                     <h1>SuperConsole</h1>
                     <div className="avatar_margin"></div>
                 </header>
