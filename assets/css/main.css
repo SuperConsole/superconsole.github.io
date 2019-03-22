@@ -68,14 +68,14 @@ table {
 
 
 #logoPic {
-    width: 350px!important;
-    height: 350px!important
+    width: 250px!important;
+    height: 250px!important
 }
 
-@media screen and (max-width:1600px) {
+@media screen and (max-width:1200px) {
     #logoPic {
-        width: 250px!important;
-        height: 250px!important
+        width: 165px!important;
+        height: 165px!important
     }
 }
 
