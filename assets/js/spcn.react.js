@@ -7,7 +7,7 @@ class SideMenu extends React.Component{
         return(
             <table>
                 <tr>
-                    <td><a href="#home">Home　　　</a></td>
+                    <td><a href="#home" id="menuButton">Home　　　</a></td>
                 </tr>
                 <tr>
                     <td><a href="#profile" id="menuButton">Profile　　　</a></td>
@@ -211,6 +211,9 @@ class ReactWrap extends React.Component{
                 break;
             case "#diary":
                 tmp = ReactMarkdown;
+                break;
+            case "#home":
+                tmp = ReactMain;
                 break;
             default:
                 tmp = ReactMain;
