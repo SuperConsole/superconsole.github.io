@@ -203,16 +203,16 @@ class ReactWrap extends React.Component{
     componentWillMount(){
         var tmp;
         switch(location.hash){
-            case "#profile":
+            case '#profile':
                 tmp = ReactProfile;
                 break;
-            case "#contact":
+            case '#contact':
                 tmp = ReactContact;
                 break;
-            case "#diary":
+            case '#diary':
                 tmp = ReactMarkdown;
                 break;
-            case "#home":
+            case '#home':
                 tmp = ReactMain;
                 break;
             default:
@@ -230,16 +230,16 @@ class ReactWrap extends React.Component{
     hashChangeHandler(){
         var tmp;
         switch(location.hash){
-            case "#profile":
+            case '#profile':
                 tmp = ReactProfile;
                 break;
-            case "#contact":
+            case '#contact':
                 tmp = ReactContact;
                 break;
-            case "#diary":
+            case '#diary':
                 tmp = ReactMarkdown;
                 break;
-            case "#home":
+            case '#home':
                 tmp = ReactMain;
                 break;
             default:
