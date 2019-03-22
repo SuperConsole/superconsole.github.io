@@ -7,16 +7,16 @@ class SideMenu extends React.Component{
         return(
             <table>
                 <tr>
-                    <td><a href='#home' id='menuButton'>Home　　　</a></td>
+                    <td><a href="#home" id="menuButton">Home　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href='#profile' id='menuButton'>Profile　　　</a></td>
+                    <td><a href="#profile" id="menuButton">Profile　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href='#diary' id='menuButton'>Diary　　　</a></td>
+                    <td><a href="#diary" id="menuButton">Diary　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href='#contact' id='menuButton'>Contact　　　</a></td>
+                    <td><a href="#contact" id="menuButton">Contact　　　</a></td>
                 </tr>
             </table>
         );
@@ -28,16 +28,16 @@ class ReactMain extends React.Component{
         return(
             <div>
                 <header>
-                    <span className='avatar'><img src='images/avatar.svg' id='logoPic'/></span>
+                    <span className="avatar"><img src="images/avatar.svg" id="logoPic"/></span>
                     <h1>SuperConsole</h1>
-                    <div className='avatar_margin'></div>
+                    <div className="avatar_margin"></div>
                 </header>
                 <footer>
-                    <ul className='icons'>
-                        <li><a href='https://twitter.com/_superconsole' className='fa-twitter'></a></li>
-                        <li><a href='https://soundcloud.com/superconsole' className='fa-soundcloud'></a></li>
-                        <li><a href='https://www.youtube.com/channel/UCtfFkG9H7xVMiPCcmGdpN_A' className='fa-youtube'></a></li>
-                        <li><a href='https://github.com/SuperConsole' className='fa-github'></a></li>
+                    <ul className="icons">
+                        <li><a href="https://twitter.com/_superconsole" className="fa-twitter"></a></li>
+                        <li><a href="https://soundcloud.com/superconsole" className="fa-soundcloud"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCtfFkG9H7xVMiPCcmGdpN_A" className="fa-youtube"></a></li>
+                        <li><a href="https://github.com/SuperConsole" className="fa-github"></a></li>
                     </ul>
                 </footer>
             </div>
@@ -53,11 +53,11 @@ class MenuButton extends React.Component{
     changeToggle(){}
     onClick(){
         if(toggle){
-            $('#main').fadeOut(75);
-            setTimeout( ()=>{$('.menu').fadeIn(75);$('#main').hide()},75);
+            $("#main").fadeOut(75);
+            setTimeout( ()=>{$(".menu").fadeIn(75);$("#main").hide()},75);
         }else{
-            $('.menu').fadeOut(75);
-            setTimeout( ()=>{$('#main').fadeIn(75);$('.menu').hide()},75);
+            $(".menu").fadeOut(75);
+            setTimeout( ()=>{$("#main").fadeIn(75);$(".menu").hide()},75);
         }
         toggle = !toggle;
     }
@@ -70,30 +70,30 @@ class ReactProfile extends React.Component{
     render(){
         return(
             <div>
-                <table className='message' style={{textAlign:'left'}}>
+                <table className="message" style={{textAlign:"left"}}>
                     <tr>
                         <td>-name</td>
                     </tr>
                     <tr>
-                        <td>　　'SuperConsole'</td>
+                        <td>　　"SuperConsole"</td>
                     </tr>
                     <tr>
                         <td>-whois</td>
                     </tr>
                     <tr>
-                        <td>　　'Music Composer, Web Designer'</td>
+                        <td>　　"Music Composer, Web Designer"</td>
                     </tr>
                     <tr>
                         <td>-age</td>
                     </tr>
                     <tr>
-                        <td>　　'{age()}'</td>
+                        <td>　　"{age()}"</td>
                     </tr>
                     <tr>
                         <td>-job</td>
                     </tr>
                     <tr>
-                        <td>　　'Chiba Institute of Technology'</td>
+                        <td>　　"Chiba Institute of Technology"</td>
                     </tr>
                     <tr>
                         <td>-skillset</td>
@@ -138,19 +138,19 @@ class ReactMarkdown extends React.Component{
         };
         (async () =>{
             try{
-                var response = await fetch('https://raw.githubusercontent.com/SuperConsole/SpCn-Diary/master/Diary.md', {method: 'GET'});
+                var response = await fetch("https://raw.githubusercontent.com/SuperConsole/SpCn-Diary/master/Diary.md", {method: "GET"});
                 var responseText = await response.text();
                 var md = responseText;
                 var parseMd = marked(md);
                 this.setState({article:parseMd});
             }catch(e){
-                console.log('failured');
+                console.log("failured");
             }
         })();
     }
     render(){
         return(
-            <div id='article' dangerouslySetInnerHTML={{__html: this.state.article}}></div>
+            <div id="article" dangerouslySetInnerHTML={{__html: this.state.article}}></div>
         );
     }
 }
@@ -158,33 +158,33 @@ class ReactContact extends React.Component{
     render(){
         return(
             <div>
-                <table className='message' style={{textAlign:'left'}}>
+                <table className="message" style={{textAlign:"left"}}>
                     <tr>
                         <td>曲やデザインの制作依頼はGmailかTwitterのDMへお願いします。</td>
                     </tr>
                     <tr>
-                        <td style={{height:'1em'}}></td>
+                        <td style={{height:"1em"}}></td>
                     </tr>
                     <tr>
-                        <td style={{height:'1em'}}></td>
+                        <td style={{height:"1em"}}></td>
                     </tr>
                     <tr>
                         <td>-Gmail</td>
                     </tr>
                     <tr>
-                        <td>　　'SuperConsoleDJEM[at]gmail.com'</td>
+                        <td>　　"SuperConsoleDJEM[at]gmail.com"</td>
                     </tr>
                     <tr>
                         <td>-Instant-mail</td>
                     </tr>
                     <tr>
-                        <td>　　'SuperConsole[at]via.tokyo.jp'</td>
+                        <td>　　"SuperConsole[at]via.tokyo.jp"</td>
                     </tr>
                     <tr>
                         <td>-Other</td>
                     </tr>
                     <tr>
-                        <td>　　'Twitter/DM (<a href='https://twitter.com/_superconsole'>@_SuperConsole</a>)'</td>
+                        <td>　　"Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)"</td>
                     </tr>
                 </table>
             </div>
@@ -203,16 +203,16 @@ class ReactWrap extends React.Component{
     componentWillMount(){
         var tmp;
         switch(location.hash){
-            case '#profile':
+            case "#profile":
                 tmp = ReactProfile;
                 break;
-            case '#contact':
+            case "#contact":
                 tmp = ReactContact;
                 break;
-            case '#diary':
+            case "#diary":
                 tmp = ReactMarkdown;
                 break;
-            case '#home':
+            case "#home":
                 tmp = ReactMain;
                 break;
             default:
@@ -222,8 +222,8 @@ class ReactWrap extends React.Component{
         this.setState({wrapTmp:tmp});
     }
     shouldComponentUpdate (){
-        $('.menu').fadeOut(75);
-        setTimeout( ()=>{$('#main').fadeIn(75);$('.menu').hide()},75);
+        $(".menu").fadeOut(75);
+        setTimeout( ()=>{$("#main").fadeIn(75);$(".menu").hide()},75);
         toggle = !toggle;
         return true;
     }
@@ -256,32 +256,32 @@ class ReactWrap extends React.Component{
 
 //ReactDOM.render(
 //    <Wrap />,
-//    document.getElementById('wrap')
+//    document.getElementById("wrap")
 //);
 
 ReactDOM.render(
     <MenuButton />,
-    document.getElementById('side-button'));
+    document.getElementById("side-button"));
 
 
 ReactDOM.render(
     <SideMenu />,
-    document.getElementById('side-menu')
+    document.getElementById("side-menu")
 );
 
 ReactDOM.render(
     <ReactWrap />,
-    document.getElementById('main')
+    document.getElementById("main")
 );
 
 function age() {
     var _birth = 19980323;
     var  today = new Date();
-    var _today = parseInt('' + today.getFullYear() + affixZero(today.getMonth() + 1) + affixZero(today.getDate()));
+    var _today = parseInt("" + today.getFullYear() + affixZero(today.getMonth() + 1) + affixZero(today.getDate()));
     return parseInt((_today - _birth) / 10000);
 }
 
 function affixZero(int) {
-    if (int < 10) int = '0' + int;
-    return '' + int;
+    if (int < 10) int = "0" + int;
+    return "" + int;
 }
