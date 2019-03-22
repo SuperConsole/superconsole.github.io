@@ -1,8 +1,6 @@
 @charset "UTF-8";
-
-@import url(font-awesome.min.css);
-
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
 
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dt,em,embed,fieldset,figcaption,figure,footer,hgroup,html,i,iframe,img,ins,kbd,legend,li,mark,menu,nav,object,output,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,var,video {
     margin: 0;
@@ -102,7 +100,7 @@ body,body:after {
 }
 
 body {
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: "Sawarabi Mincho";
     font-size: 14pt;
     font-weight: 300;
     line-height: 2;
@@ -656,7 +654,8 @@ dl dd {
     margin: 0;
     padding: 0;
     font-size: .5em;
-    list-style: none
+    list-style: none;
+    letter-spacing: 2px;
 }
 
 #footer .copyright li {
@@ -735,7 +734,7 @@ body.is-ie #wrapper {
     color: #222
 }
 
-#main_header,.side-bar {
+#main_header.side-bar {
     text-align: center
 }
 
@@ -782,6 +781,20 @@ a:active,a:hover,a:link,a:visited {
 }
 
 #article{
+    width: 980px;
     text-align: left;
-    line-height: 1.8;
+    line-height: 25px;
+}
+
+#article>p{
+    font-size: 16px;
+}
+
+@media screen and (max-width:980px) {
+    #article{
+        width: auto;
+    }
+    #article>p{
+        font-size: 15px;
+    }
 }

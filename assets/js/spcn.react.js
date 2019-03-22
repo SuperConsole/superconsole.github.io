@@ -216,7 +216,7 @@ class ReactWrap extends React.Component{
         }
         this.setState({wrapTmp:tmp});
     }
-    
+
     render(){
         return <this.state.wrapTmp />
     }
