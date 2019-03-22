@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
 
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dt,em,embed,fieldset,figcaption,figure,footer,hgroup,html,i,iframe,img,ins,kbd,legend,li,mark,menu,nav,object,output,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,var,video {
-    margin: 0;
+    margin: 2px;
     padding: 0;
     border: 0;
     font: inherit;
@@ -68,14 +68,14 @@ table {
 
 
 #logoPic {
-    width: 350px!important;
-    height: 350px!important
+    width: 250px!important;
+    height: 250px!important
 }
 
-@media screen and (max-width:1600px) {
+@media screen and (max-width:1200px) {
     #logoPic {
-        width: 250px!important;
-        height: 250px!important
+        width: 165px!important;
+        height: 165px!important
     }
 }
 
@@ -585,19 +585,11 @@ dl dd {
 #main {
     position: relative;
     top: 2em;
-    max-width: 100%;
-    min-width: 35em;
-    padding: 4em 2.5em 2.5em;
+    max-width: 96%;
     background: 0 0;
     cursor: default;
     text-align: center;
     height: 100%
-}
-
-@media screen and (max-width:1600px) {
-    #main {
-        padding: 2em 2em 0.5em
-    }
 }
 
 #main .avatar {
@@ -624,7 +616,7 @@ dl dd {
         min-width: 0;
         width: 100%;
         height: 100%;
-        padding: 4em 2em 2.5em
+        padding-top: 2em
     }
 }
 
@@ -770,7 +762,7 @@ body.is-ie #wrapper {
 
 .top-bar {
     position: fixed;
-    background: 0 0;
+    background: rgba(0,0,0,0);
     top: 1em;
     left: 5%
 }
@@ -781,7 +773,6 @@ a:active,a:hover,a:link,a:visited {
 }
 
 #article{
-    width: 980px;
     text-align: left;
     line-height: 25px;
 }
@@ -791,9 +782,6 @@ a:active,a:hover,a:link,a:visited {
 }
 
 @media screen and (max-width:980px) {
-    #article{
-        width: auto;
-    }
     #article>p{
         font-size: 15px;
     }
