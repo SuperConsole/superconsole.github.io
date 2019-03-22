@@ -3,24 +3,20 @@
 //}
 
 class SideMenu extends React.Component{
-    onClick(){
-        setTimeout(()=>{location.reload()},300);
-        setTimeout(()=>{location.reload()},300);
-    }
     render(){
         return(
             <table>
                 <tr>
-                    <td><a href="./" onClick={()=>{this.onClick()}}>Home　　　</a></td>
+                    <td><a href="#home">Home　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#profile" id="menuButton" onClick={()=>{this.onClick()()}}>Profile　　　</a></td>
+                    <td><a href="#profile" id="menuButton">Profile　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#diary" id="menuButton" onClick={()=>{this.onClick()}}>Diary　　　</a></td>
+                    <td><a href="#diary" id="menuButton">Diary　　　</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#contact" id="menuButton" onClick={()=>{this.onClick()}}>Contact　　　</a></td>
+                    <td><a href="#contact" id="menuButton">Contact　　　</a></td>
                 </tr>
             </table>
         );
@@ -49,22 +45,21 @@ class ReactMain extends React.Component{
     }
 }
 
+var toggle=true;//MenuButton<=>ReactWrap
 class MenuButton extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-            toggle: true,
-        }
     }
+    changeToggle(){}
     onClick(){
-        if(this.state.toggle){
-            $("#main").fadeOut(100);
-            setTimeout( ()=>{$(".menu").fadeIn(100);$("#main").hide()},100);
+        if(toggle){
+            $("#main").fadeOut(75);
+            setTimeout( ()=>{$(".menu").fadeIn(75);$("#main").hide()},75);
         }else{
-            $(".menu").fadeOut(100);
-            setTimeout( ()=>{$("#main").fadeIn(100);$(".menu").hide()},100);
+            $(".menu").fadeOut(75);
+            setTimeout( ()=>{$("#main").fadeIn(75);$(".menu").hide()},75);
         }
-        this.setState({toggle: !this.state.toggle});
+        toggle = !toggle;
     }
     render(){
         return<h1 onClick={()=>this.onClick()}>≡</h1>
@@ -201,8 +196,9 @@ class ReactWrap extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            wrapTmp:ReactMain,
+            wrapTmp:'',
         }
+        this.hashChangeHandler = this.hashChangeHandler.bind(this);
     }
     componentWillMount(){
         var tmp;
@@ -222,8 +218,35 @@ class ReactWrap extends React.Component{
         }
         this.setState({wrapTmp:tmp});
     }
-
+    shouldComponentUpdate (){
+        $(".menu").fadeOut(75);
+        setTimeout( ()=>{$("#main").fadeIn(75);$(".menu").hide()},75);
+        toggle = !toggle;
+        return true;
+    }
+    hashChangeHandler(){
+        var tmp;
+        switch(location.hash){
+            case "#profile":
+                tmp = ReactProfile;
+                break;
+            case "#contact":
+                tmp = ReactContact;
+                break;
+            case "#diary":
+                tmp = ReactMarkdown;
+                break;
+            case "#home":
+                tmp = ReactMain;
+                break;
+            default:
+                tmp = ReactMain;
+                break;
+        }
+        this.setState({wrapTmp:tmp});
+    }
     render(){
+        window.onhashchange = this.hashChangeHandler;
         return <this.state.wrapTmp />
     }
 }
