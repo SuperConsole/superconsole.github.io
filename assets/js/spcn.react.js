@@ -68,55 +68,49 @@ class ReactProfile extends React.Component{
             <div>
                 <table className="message" style={{textAlign:"left"}}>
                     <tr>
-                        <td>-name</td>
+                        <td>- NAME</td>
                     </tr>
                     <tr>
-                        <td>　　"SuperConsole"</td>
+                        <td>　　SuperConsole</td>
                     </tr>
                     <tr>
-                        <td>-whois</td>
+                        <td>- WHOIS</td>
                     </tr>
                     <tr>
-                        <td>　　"Music Composer, Web Designer"</td>
+                        <td>　　Music Composer, Web Designer</td>
                     </tr>
                     <tr>
-                        <td>-age</td>
+                        <td>- AGE</td>
                     </tr>
                     <tr>
-                        <td>　　"{age()}"</td>
+                        <td>　　{age()}</td>
                     </tr>
                     <tr>
-                        <td>-job</td>
+                        <td>- SCHOOL</td>
                     </tr>
                     <tr>
-                        <td>　　"Chiba Institute of Technology"</td>
+                        <td>　　Chiba Institute of Technology</td>
                     </tr>
                     <tr>
-                        <td>-skillset</td>
+                        <td>- PLATFORM</td>
                     </tr>
                     <tr>
-                        <td>　　Atom / Terapad / Brackets /</td>
+                        <td>　　SW: Atom, Terapad</td>
                     </tr>
                     <tr>
-                        <td>　　JavaScript / Python /  Java /</td>
+                        <td>　　lang: Java</td>
                     </tr>
                     <tr>
-                        <td>　　jQuery / React / Node.js /</td>
+                        <td>　　FW: jQuery</td>
                     </tr>
                     <tr>
-                        <td>　　KaliLinux / Ubuntu / Debian /</td>
+                        <td>- BEGINNER</td>
                     </tr>
                     <tr>
-                        <td>　　情報処理安全確保支援士 / FE / AP /</td>
+                        <td>　　lang: C/C#, Python, </td>
                     </tr>
                     <tr>
-                        <td>　　Chrome DevTools / Kindle /</td>
-                    </tr>
-                    <tr>
-                        <td>　　MS Office / Evetnote /</td>
-                    </tr>
-                    <tr>
-                        <td>　　Git / GitHub / bash / </td>
+                        <td>　　FW: React</td>
                     </tr>
                 </table>
             </div>
@@ -165,22 +159,22 @@ class ReactContact extends React.Component{
                         <td style={{height:"1em"}}></td>
                     </tr>
                     <tr>
-                        <td>-Gmail</td>
+                        <td>- Gmail</td>
                     </tr>
                     <tr>
-                        <td>　　"SuperConsoleDJEM[at]gmail.com"</td>
+                        <td>　　SuperConsoleDJEM[at]gmail.com</td>
                     </tr>
                     <tr>
-                        <td>-Instant-mail</td>
+                        <td>- Instant-mail</td>
                     </tr>
                     <tr>
-                        <td>　　"SuperConsole[at]via.tokyo.jp"</td>
+                        <td>　　SuperConsole[at]via.tokyo.jp</td>
                     </tr>
                     <tr>
-                        <td>-Other</td>
+                        <td>- Other</td>
                     </tr>
                     <tr>
-                        <td>　　"Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)"</td>
+                        <td>　　Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)</td>
                     </tr>
                 </table>
             </div>
