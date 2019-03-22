@@ -1,7 +1,3 @@
-//class Wrap extends React.Component{
-
-//}
-
 class SideMenu extends React.Component{
     render(){
         return(
@@ -253,11 +249,6 @@ class ReactWrap extends React.Component{
         return <this.state.wrapTmp />
     }
 }
-
-//ReactDOM.render(
-//    <Wrap />,
-//    document.getElementById("wrap")
-//);
 
 ReactDOM.render(
     <MenuButton />,
