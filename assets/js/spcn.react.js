@@ -192,7 +192,7 @@ class ReactWrap extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            wrapTmp:"",
+            wrapTmp:null,
         }
         this.hashChangeHandler = this.hashChangeHandler.bind(this);
     }
