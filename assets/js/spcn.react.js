@@ -2,18 +2,20 @@ class SideMenu extends React.Component{
     render(){
         return(
             <table>
-                <tr>
-                    <td><a href="#home" id="menuButton">Home　　　</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#profile" id="menuButton">Profile　　　</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#diary" id="menuButton">Diary　　　</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#contact" id="menuButton">Contact　　　</a></td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td><a href="#home" id="menuButton">Home　　　</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#profile" id="menuButton">Profile　　　</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#diary" id="menuButton">Diary　　　</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#contact" id="menuButton">Contact　　　</a></td>
+                    </tr>
+                </tbody>
             </table>
         );
     }
@@ -67,57 +69,59 @@ class ReactProfile extends React.Component{
         return(
             <div>
                 <table className="message" style={{textAlign:"left"}}>
-                    <tr>
-                        <td>-name</td>
-                    </tr>
-                    <tr>
-                        <td>　　"SuperConsole"</td>
-                    </tr>
-                    <tr>
-                        <td>-whois</td>
-                    </tr>
-                    <tr>
-                        <td>　　"Music Composer, Web Designer"</td>
-                    </tr>
-                    <tr>
-                        <td>-age</td>
-                    </tr>
-                    <tr>
-                        <td>　　"{age()}"</td>
-                    </tr>
-                    <tr>
-                        <td>-job</td>
-                    </tr>
-                    <tr>
-                        <td>　　"Chiba Institute of Technology"</td>
-                    </tr>
-                    <tr>
-                        <td>-skillset</td>
-                    </tr>
-                    <tr>
-                        <td>　　Atom / Terapad / Brackets /</td>
-                    </tr>
-                    <tr>
-                        <td>　　JavaScript / Python /  Java /</td>
-                    </tr>
-                    <tr>
-                        <td>　　jQuery / React / Node.js /</td>
-                    </tr>
-                    <tr>
-                        <td>　　KaliLinux / Ubuntu / Debian /</td>
-                    </tr>
-                    <tr>
-                        <td>　　情報処理安全確保支援士 / FE / AP /</td>
-                    </tr>
-                    <tr>
-                        <td>　　Chrome DevTools / Kindle /</td>
-                    </tr>
-                    <tr>
-                        <td>　　MS Office / Evetnote /</td>
-                    </tr>
-                    <tr>
-                        <td>　　Git / GitHub / bash / </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>-name</td>
+                        </tr>
+                        <tr>
+                            <td>　　"SuperConsole"</td>
+                        </tr>
+                        <tr>
+                            <td>-whois</td>
+                        </tr>
+                        <tr>
+                            <td>　　"Music Composer, Web Designer"</td>
+                        </tr>
+                        <tr>
+                            <td>-age</td>
+                        </tr>
+                        <tr>
+                            <td>　　"{age()}"</td>
+                        </tr>
+                        <tr>
+                            <td>-job</td>
+                        </tr>
+                        <tr>
+                            <td>　　"Chiba Institute of Technology"</td>
+                        </tr>
+                        <tr>
+                            <td>-skillset</td>
+                        </tr>
+                        <tr>
+                            <td>　　Atom / Terapad / Brackets /</td>
+                        </tr>
+                        <tr>
+                            <td>　　JavaScript / Python /  Java /</td>
+                        </tr>
+                        <tr>
+                            <td>　　jQuery / React / Node.js /</td>
+                        </tr>
+                        <tr>
+                            <td>　　KaliLinux / Ubuntu / Debian /</td>
+                        </tr>
+                        <tr>
+                            <td>　　情報処理安全確保支援士 / FE / AP /</td>
+                        </tr>
+                        <tr>
+                            <td>　　Chrome DevTools / Kindle /</td>
+                        </tr>
+                        <tr>
+                            <td>　　MS Office / Evetnote /</td>
+                        </tr>
+                        <tr>
+                            <td>　　Git / GitHub / bash / </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         );
@@ -155,33 +159,35 @@ class ReactContact extends React.Component{
         return(
             <div>
                 <table className="message" style={{textAlign:"left"}}>
-                    <tr>
-                        <td>曲やデザインの制作依頼はGmailかTwitterのDMへお願いします。</td>
-                    </tr>
-                    <tr>
-                        <td style={{height:"1em"}}></td>
-                    </tr>
-                    <tr>
-                        <td style={{height:"1em"}}></td>
-                    </tr>
-                    <tr>
-                        <td>-Gmail</td>
-                    </tr>
-                    <tr>
-                        <td>　　"SuperConsoleDJEM[at]gmail.com"</td>
-                    </tr>
-                    <tr>
-                        <td>-Instant-mail</td>
-                    </tr>
-                    <tr>
-                        <td>　　"SuperConsole[at]via.tokyo.jp"</td>
-                    </tr>
-                    <tr>
-                        <td>-Other</td>
-                    </tr>
-                    <tr>
-                        <td>　　"Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)"</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>曲やデザインの制作依頼はGmailかTwitterのDMへお願いします。</td>
+                        </tr>
+                        <tr>
+                            <td style={{height:"1em"}}></td>
+                        </tr>
+                        <tr>
+                            <td style={{height:"1em"}}></td>
+                        </tr>
+                        <tr>
+                            <td>-Gmail</td>
+                        </tr>
+                        <tr>
+                            <td>　　"SuperConsoleDJEM[at]gmail.com"</td>
+                        </tr>
+                        <tr>
+                            <td>-Instant-mail</td>
+                        </tr>
+                        <tr>
+                            <td>　　"SuperConsole[at]via.tokyo.jp"</td>
+                        </tr>
+                        <tr>
+                            <td>-Other</td>
+                        </tr>
+                        <tr>
+                            <td>　　"Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)"</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         );
