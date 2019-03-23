@@ -1,0 +1,2 @@
+*gitにコミットする前にjsトランスパイルすること
+$./node_modules/.bin/babel ./superconsole.github.io/assets/js/spcn.react.js --presets react --out-file ./superconsole.github.io/assets/js/script.js
