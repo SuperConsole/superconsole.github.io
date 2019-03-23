@@ -282,7 +282,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\u60C5\u5831\u51E6\u7406\u5B89\u5168\u78BA\u4FDD\u652F\u63F4\u58EB / FE / AP /"
+                            "\u3000\u3000\u60C5\u5831\u51E6\u7406\u5B89\u5168\u78BA\u4FDD\u652F\u63F4\u58EB /"
                         )
                     ),
                     React.createElement(
