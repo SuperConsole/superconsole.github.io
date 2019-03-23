@@ -17,5 +17,9 @@
   <loc>https://superconsole.work/#contact</loc>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://superconsole.work/toxic4/</loc>
+  <priority>0.8</priority>
+</url>
 
 </urlset>
