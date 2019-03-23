@@ -110,7 +110,7 @@ class ReactProfile extends React.Component{
                             <td>　　KaliLinux / Ubuntu / Debian /</td>
                         </tr>
                         <tr>
-                            <td>　　情報処理安全確保支援士 / FE / AP /</td>
+                            <td>　　情報処理安全確保支援士 /</td>
                         </tr>
                         <tr>
                             <td>　　Chrome DevTools / Kindle /</td>
