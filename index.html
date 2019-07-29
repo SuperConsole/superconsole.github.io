@@ -1,67 +1,73 @@
 <!DOCTYPE HTML>
 <html lang="ja">
 
-	<!--head-->
-	<head>
-		<!--Details-->
-			<meta charset="UTF-8"/>
-			<title>SuperConsole | Official Site</title>
-			<link rel="shortcut icon" href="images/favicon.ico"/>
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--head-->
 
-		<!--Info-->
-			<meta name="ROBOTS" content="INDEX, FOLLOW" />
-			<meta name="description" content="SuperConsole is Music Composer & Web Designer / Twitter:@_SuperConsole / SoundCloud:@SuperConsole /">
-			<meta name="keywords" content="superconsole, qzifyes, spcn, super console, スーパーコンソール, すーぱーこんそーる">
+<head>
+	<!--Details-->
+	<meta charset="UTF-8" />
+	<title>SuperConsole | Official Site</title>
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!--Styles-->
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-			<link rel="stylesheet" href="assets/css/main.css" />
-			<!-- CSS-VHS <link rel="stylesheet" href="https://d2v52k3cl9vedd.cloudfront.net/vhs/0.1.0/vhs.min.css">-->
+	<!--Info-->
+	<meta name="ROBOTS" content="INDEX, FOLLOW" />
+	<meta name="description"
+		content="SuperConsole is Music Composer & Web Designer / Twitter:@_SuperConsole / SoundCloud:@SuperConsole /">
+	<meta name="keywords" content="superconsole, qzifyes, spcn, super console, スーパーコンソール, すーぱーこんそーる">
 
-		<!--Script-->
-		<meta http-equiv="Content-Script-Type" content="text/javascript" />
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-			<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-			<!--<script src="assets/js/script.js"></script>-->
-				<!-- babel <script type="text/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
-				<!-- es16 <script src="assets/js/spcn.react.js" type="text/babel"></script>-->
-	</head>
+	<!--Styles-->
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- CSS-VHS <link rel="stylesheet" href="https://d2v52k3cl9vedd.cloudfront.net/vhs/0.1.0/vhs.min.css">-->
 
-	<!--body-->
-	<body style="background-color: #000;">
-		<div id="wrapper">
-			<header class="top-bar">
-				<table>
-					<tr>
-						<!--React / Virtual DOM *TEST Branchs-->
-							<td id="side-button" class="side-bar"></td>
-						<td><div class="space"></div></td>
-					</tr>
-				</table>
-			</header>
-			<!--React / Virtual DOM-->
-			<div id="side-menu" class="menu" style="z-index:9;background:rgba(0,0,0,0);"></div>
-			<div id="main"style="z-index:0;"></div>
+	<!--Script-->
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<!--<script src="assets/js/script.js"></script>-->
+	 <!--<script type="text/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	 <script src="assets/js/spcn.react.js" type="text/babel"></script>-->
+</head>
 
-			<footer id="footer">
-				<ul class="copyright">
-					<li>Copyright&copy; SuperConsole 2018 All Rights Reserved.</li>
-				</ul>
-			</footer>
-		</div>
-	</body>
-	<!--to avoid React DOM error:200-->
-	<script src="assets/js/script.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141914707-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<!--body-->
 
-	  gtag('config', 'UA-141914707-1');
-	</script>
+<body style="background-color: #111;">
+	<div id="wrapper">
+		<header class="top-bar">
+			<table>
+				<tr>
+					<!--React / Virtual DOM *TEST Branchs-->
+					<td id="side-button" class="side-bar"></td>
+					<td>
+						<div class="space"></div>
+					</td>
+				</tr>
+			</table>
+		</header>
+		<!--React / Virtual DOM-->
+		<div id="side-menu" class="menu" style="z-index:9;background:rgba(0,0,0,0);"></div>
+		<div id="main" style="z-index:0;"></div>
+
+		<footer id="footer">
+			<ul class="copyright">
+				<li>Copyright&copy; SuperConsole 2018 All Rights Reserved.</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+<!--to avoid React DOM error:200-->
+ <script src="assets/js/script.js"></script> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141914707-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'UA-141914707-1');
+</script>
+
 </html>
