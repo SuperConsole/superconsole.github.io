@@ -42,6 +42,19 @@ class SideMenu extends React.Component {
                         null,
                         React.createElement(
                             "a",
+                            { href: "#blog", id: "menuButton" },
+                            "Blog\u3000\u3000\u3000"
+                        )
+                    )
+                ),
+                React.createElement(
+                    "tr",
+                    null,
+                    React.createElement(
+                        "td",
+                        null,
+                        React.createElement(
+                            "a",
                             { href: "#diary", id: "menuButton" },
                             "Diary\u3000\u3000\u3000"
                         )
@@ -172,7 +185,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\"SuperConsole\""
+                            "\u3000\u3000SuperConsole (SpCn / _spxn)"
                         )
                     ),
                     React.createElement(
@@ -181,7 +194,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "-whois"
+                            "-jobs"
                         )
                     ),
                     React.createElement(
@@ -190,7 +203,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\"Music Composer, Web Designer\""
+                            "\u3000\u3000Composer, Designer, White hat"
                         )
                     ),
                     React.createElement(
@@ -208,9 +221,8 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\"",
-                            age(),
-                            "\""
+                            "\u3000\u3000",
+                            age()
                         )
                     ),
                     React.createElement(
@@ -228,7 +240,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\"Chiba Institute of Technology\""
+                            "\u3000\u3000Chiba Institute of Technology"
                         )
                     ),
                     React.createElement(
@@ -246,7 +258,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000Atom / Terapad / Brackets /"
+                            "\u3000\u3000VSCode / Atom /"
                         )
                     ),
                     React.createElement(
@@ -255,7 +267,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000JavaScript / Python /  Java /"
+                            "\u3000\u3000KaliLinux / TailsLinux / ArchLinux /"
                         )
                     ),
                     React.createElement(
@@ -264,7 +276,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000jQuery / React / Node.js /"
+                            "\u3000\u3000Metasploit / OWASP ZAP / Exploit-db /"
                         )
                     ),
                     React.createElement(
@@ -273,25 +285,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000KaliLinux / Ubuntu / Debian /"
-                        )
-                    ),
-                    React.createElement(
-                        "tr",
-                        null,
-                        React.createElement(
-                            "td",
-                            null,
-                            "\u3000\u3000\u60C5\u5831\u51E6\u7406\u5B89\u5168\u78BA\u4FDD\u652F\u63F4\u58EB /"
-                        )
-                    ),
-                    React.createElement(
-                        "tr",
-                        null,
-                        React.createElement(
-                            "td",
-                            null,
-                            "\u3000\u3000Chrome DevTools / Kindle /"
+                            "\u3000\u3000\u60C5\u5831\u51E6\u7406\u5B89\u5168\u78BA\u4FDD\u652F\u63F4\u58EB\u8A66\u9A13\u5408\u683C /"
                         )
                     ),
                     React.createElement(
@@ -309,7 +303,7 @@ class ReactProfile extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000Git / GitHub / bash / "
+                            "\u3000\u3000Git / bash / Docker /"
                         )
                     )
                 )
@@ -318,7 +312,29 @@ class ReactProfile extends React.Component {
     }
 }
 
-class ReactMarkdown extends React.Component {
+class ReactBlog extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            article: null
+        };
+        (async () => {
+            try {
+                var response = await fetch("https://raw.githubusercontent.com/SuperConsole/SpCn-Diary/master/Blog.md", { method: "GET" });
+                var responseText = await response.text();
+                var md = responseText;
+                var parseMd = marked(md);
+                this.setState({ article: parseMd });
+            } catch (e) {
+                console.log("failured");
+            }
+        })();
+    }
+    render() {
+        return React.createElement("div", { id: "article", dangerouslySetInnerHTML: { __html: this.state.article } });
+    }
+}
+class ReactDiary extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -385,7 +401,7 @@ class ReactContact extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\"SuperConsoleDJEM[at]gmail.com\""
+                            "\u3000\u3000SuperConsoleDJEM[at]gmail.com"
                         )
                     ),
                     React.createElement(
@@ -394,7 +410,7 @@ class ReactContact extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "-Instant-mail"
+                            "-Outlook"
                         )
                     ),
                     React.createElement(
@@ -403,7 +419,7 @@ class ReactContact extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\"SuperConsole[at]via.tokyo.jp\""
+                            "\u3000\u3000superconsole.work[at]outlook.com"
                         )
                     ),
                     React.createElement(
@@ -421,13 +437,7 @@ class ReactContact extends React.Component {
                         React.createElement(
                             "td",
                             null,
-                            "\u3000\u3000\"Twitter/DM (",
-                            React.createElement(
-                                "a",
-                                { href: "https://twitter.com/_superconsole" },
-                                "@_SuperConsole"
-                            ),
-                            ")\""
+                            "\u3000\u3000Twitter/DM @_SuperConsole or @_spxn"
                         )
                     )
                 )
@@ -453,8 +463,11 @@ class ReactWrap extends React.Component {
             case "#contact":
                 tmp = ReactContact;
                 break;
+            case "#blog":
+                tmp = ReactBlog;
+                break;
             case "#diary":
-                tmp = ReactMarkdown;
+                tmp = ReactDiary;
                 break;
             case "#home":
                 tmp = ReactMain;
@@ -483,7 +496,10 @@ class ReactWrap extends React.Component {
                 tmp = ReactContact;
                 break;
             case '#diary':
-                tmp = ReactMarkdown;
+                tmp = ReactDiary;
+                break;
+            case '#blog':
+                tmp = ReactBlog;
                 break;
             case '#home':
                 tmp = ReactMain;

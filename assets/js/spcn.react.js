@@ -10,6 +10,9 @@ class SideMenu extends React.Component{
                         <td><a href="#profile" id="menuButton">Profile　　　</a></td>
                     </tr>
                     <tr>
+                        <td><a href="#blog" id="menuButton">Blog　　　</a></td>
+                    </tr>
+                    <tr>
                         <td><a href="#diary" id="menuButton">Diary　　　</a></td>
                     </tr>
                     <tr>
@@ -74,52 +77,46 @@ class ReactProfile extends React.Component{
                             <td>-name</td>
                         </tr>
                         <tr>
-                            <td>　　"SuperConsole"</td>
+                            <td>　　SuperConsole (SpCn / _spxn)</td>
                         </tr>
                         <tr>
-                            <td>-whois</td>
+                            <td>-jobs</td>
                         </tr>
                         <tr>
-                            <td>　　"Music Composer, Web Designer"</td>
+                            <td>　　Composer, Designer, White hat</td>
                         </tr>
                         <tr>
                             <td>-age</td>
                         </tr>
                         <tr>
-                            <td>　　"{age()}"</td>
+                            <td>　　{age()}</td>
                         </tr>
                         <tr>
                             <td>-job</td>
                         </tr>
                         <tr>
-                            <td>　　"Chiba Institute of Technology"</td>
+                            <td>　　Chiba Institute of Technology</td>
                         </tr>
                         <tr>
                             <td>-skillset</td>
                         </tr>
                         <tr>
-                            <td>　　Atom / Terapad / Brackets /</td>
+                            <td>　　VSCode / Atom /</td>
                         </tr>
                         <tr>
-                            <td>　　JavaScript / Python /  Java /</td>
+                            <td>　　KaliLinux / TailsLinux / ArchLinux /</td>
                         </tr>
                         <tr>
-                            <td>　　jQuery / React / Node.js /</td>
+                            <td>　　Metasploit / OWASP ZAP / Exploit-db /</td>
                         </tr>
                         <tr>
-                            <td>　　KaliLinux / Ubuntu / Debian /</td>
-                        </tr>
-                        <tr>
-                            <td>　　情報処理安全確保支援士 /</td>
-                        </tr>
-                        <tr>
-                            <td>　　Chrome DevTools / Kindle /</td>
+                            <td>　　情報処理安全確保支援士試験合格 /</td>
                         </tr>
                         <tr>
                             <td>　　MS Office / Evetnote /</td>
                         </tr>
                         <tr>
-                            <td>　　Git / GitHub / bash / </td>
+                            <td>　　Git / bash / Docker /</td>
                         </tr>
                     </tbody>
                 </table>
@@ -130,7 +127,31 @@ class ReactProfile extends React.Component{
 
 
 
-class ReactMarkdown extends React.Component{
+class ReactBlog extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+          article: null,
+        };
+        (async () =>{
+            try{
+                var response = await fetch("https://raw.githubusercontent.com/SuperConsole/SpCn-Diary/master/Blog.md", {method: "GET"});
+                var responseText = await response.text();
+                var md = responseText;
+                var parseMd = marked(md);
+                this.setState({article:parseMd});
+            }catch(e){
+                console.log("failured");
+            }
+        })();
+    }
+    render(){
+        return(
+            <div id="article" dangerouslySetInnerHTML={{__html: this.state.article}}></div>
+        );
+    }
+}
+class ReactDiary extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -173,19 +194,19 @@ class ReactContact extends React.Component{
                             <td>-Gmail</td>
                         </tr>
                         <tr>
-                            <td>　　"SuperConsoleDJEM[at]gmail.com"</td>
+                            <td>　　SuperConsoleDJEM[at]gmail.com</td>
                         </tr>
                         <tr>
-                            <td>-Instant-mail</td>
+                            <td>-Outlook</td>
                         </tr>
                         <tr>
-                            <td>　　"SuperConsole[at]via.tokyo.jp"</td>
+                            <td>　　superconsole.work[at]outlook.com</td>
                         </tr>
                         <tr>
                             <td>-Other</td>
                         </tr>
                         <tr>
-                            <td>　　"Twitter/DM (<a href="https://twitter.com/_superconsole">@_SuperConsole</a>)"</td>
+                            <td>　　Twitter/DM @_SuperConsole or @_spxn</td>
                         </tr>
                     </tbody>
                 </table>
@@ -211,8 +232,11 @@ class ReactWrap extends React.Component{
             case "#contact":
                 tmp = ReactContact;
                 break;
+            case "#blog":
+                tmp = ReactBlog;
+                break;
             case "#diary":
-                tmp = ReactMarkdown;
+                tmp = ReactDiary;
                 break;
             case "#home":
                 tmp = ReactMain;
@@ -239,7 +263,10 @@ class ReactWrap extends React.Component{
                 tmp = ReactContact;
                 break;
             case '#diary':
-                tmp = ReactMarkdown;
+                tmp = ReactDiary;
+                break;
+            case '#blog':
+                tmp = ReactBlog;
                 break;
             case '#home':
                 tmp = ReactMain;

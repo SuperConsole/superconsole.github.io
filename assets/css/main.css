@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
 
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dt,em,embed,fieldset,figcaption,figure,footer,hgroup,html,i,iframe,img,ins,kbd,legend,li,mark,menu,nav,object,output,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,var,video {
-    margin: 2px;
+    margin: 0px;
     padding: 0;
     border: 0;
     font: inherit;
@@ -37,7 +37,7 @@ header#main_header {
     font: inherit;
     width: 100vw;
     padding-top: .5em;
-    background: #000;
+    background: #111;
     opacity: .95;
     cursor: default;
     text-align: center
@@ -96,7 +96,7 @@ html {
 }
 
 body,body:after {
-    background-color: #000
+    background-color: #111
 }
 
 body {
@@ -132,7 +132,7 @@ input,select,textarea {
 
 @media screen and (max-width:1680px) {
     body,input,select,textarea {
-        font-size: 19pt
+        font-size: 15pt
     }
 }
 
@@ -176,7 +176,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 2.4em;
+    font-size: 2em;
     letter-spacing: .22em;
     margin: 0 0 .525em
 }
@@ -262,7 +262,7 @@ input[type=email]:invalid,input[type=password]:invalid,input[type=tel]:invalid,i
 }
 
 input[type=email]:focus,input[type=password]:focus,input[type=tel]:focus,input[type=text]:focus,select:focus,textarea:focus {
-    border-color: #000
+    border-color: #111
 }
 
 .select-wrapper {
@@ -279,7 +279,7 @@ input[type=email]:focus,input[type=password]:focus,input[type=tel]:focus,input[t
     font-style: normal;
     font-weight: 400;
     text-transform: none!important;
-    color: #000;
+    color: #111;
     display: block;
     height: 2.75em;
     line-height: 2.75em;
@@ -348,12 +348,12 @@ input[type=checkbox]+label:before,input[type=radio]+label:before {
 }
 
 input[type=checkbox]:checked+label:before,input[type=radio]:checked+label:before {
-    color: #000;
+    color: #111;
     content: '\f00c'
 }
 
 input[type=checkbox]:focus+label:before,input[type=radio]:focus+label:before {
-    border-color: #000
+    border-color: #111
 }
 
 input[type=checkbox]+label:before {
@@ -453,7 +453,7 @@ ul.icons li a {
     width: 100px;
     height: 75px;
     border-radius: 5px;
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px #111;
     line-height: 3.75em;
     overflow: hidden;
     text-align: center;
@@ -487,7 +487,7 @@ ul.icons li a:before {
 }
 
 ul.icons li a:hover:before {
-    text-shadow: 1.25px 0 0 #000,-1.25px 0 0 #000,0 1.25px 0 #000,0 -1.25px 0 #000
+    text-shadow: 1.25px 0 0 #111,-1.25px 0 0 #111,0 1.25px 0 #111,0 -1.25px 0 #111
 }
 
 ul.icons li a:hover {
@@ -548,8 +548,8 @@ dl dd {
 }
 
 .button:hover,button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]:hover {
-    border-color: #000;
-    color: #000!important
+    border-color: #111;
+    color: #111!important
 }
 
 .button.icon,button.icon,input[type=button].icon,input[type=reset].icon,input[type=submit].icon {
@@ -723,7 +723,7 @@ body.is-ie #wrapper {
 }
 
 .side-bar :active {
-    color: #222
+    color: #111
 }
 
 #main_header.side-bar {
@@ -737,10 +737,10 @@ body.is-ie #wrapper {
 .menu {
     display: none;
     position: auto;
-    background-color: #000;
+    background-color: #111;
     top: 3em;
     left: calc(50%-300px);
-    font-size: 3em;
+    font-size: 2em;
     text-align: left
 }
 
@@ -751,7 +751,7 @@ body.is-ie #wrapper {
 
 .menu tr :active {
     cursor: default;
-    color: #222
+    color: #111
 }
 
 @media screen and (max-width:1600px) {
@@ -767,18 +767,22 @@ body.is-ie #wrapper {
     left: 5%
 }
 
-a:active,a:hover,a:link,a:visited {
-    color: #fff;
+a:active,a:link,a:visited {
+    color: #ddd;
     text-decoration: none
+}
+
+a:hover{
+    color: #666;
 }
 
 #article{
     text-align: left;
-    line-height: 25px;
+    line-height: 20px;
 }
 
 #article>p{
-    font-size: 16px;
+    font-size: 15px;
 }
 
 @media screen and (max-width:980px) {
