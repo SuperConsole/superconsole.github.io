@@ -2,7 +2,6 @@
 <html lang="ja">
 
 <!--head-->
-
 <head>
 	<!--Details-->
 	<meta charset="UTF-8" />
@@ -33,22 +32,10 @@
 </head>
 
 <!--body-->
-
 <body style="background-color: #111;">
-	<div id="wrapper">
-		<header class="top-bar">
-			<table>
-				<tr>
-					<!--React / Virtual DOM *TEST Branchs-->
-					<td id="side-button" class="side-bar"></td>
-					<td>
-						<div class="space"></div>
-					</td>
-				</tr>
-			</table>
-		</header>
-		<!--React / Virtual DOM-->
-		<div id="side-menu" class="menu" style="z-index:9;background:rgba(0,0,0,0);"></div>
+	<div id="wrapper"><!--React / Virtual DOM-->
+		<div id="side-button" class="side-bar"></div>
+		<div id="list" class="menu" style="z-index:9;background:rgba(0,0,0,0);"></div>
 		<div id="main" style="z-index:0;"></div>
 
 		<footer id="footer">
@@ -57,17 +44,14 @@
 			</ul>
 		</footer>
 	</div>
-</body>
-<!--to avoid React DOM error:200-->
- <script src="assets/js/script.js"></script> 
+</body><!--to avoid React DOM error:200-->
+<script src="assets/js/script.js"></script> 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141914707-1"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag() { dataLayer.push(arguments); }
 	gtag('js', new Date());
-
 	gtag('config', 'UA-141914707-1');
 </script>
-
 </html>

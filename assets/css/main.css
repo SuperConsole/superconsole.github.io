@@ -2,7 +2,7 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "https://fonts.googleapis.com/css?family=Sawarabi+Mincho";
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dt,em,embed,fieldset,figcaption,figure,footer,hgroup,html,i,iframe,img,ins,kbd,legend,li,mark,menu,nav,object,output,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
-dl,form,h1,h2,h3,h4,h5,h6,header,label,ol,p,ul{padding:0;border:0;font:inherit;vertical-align:baseline}
+dl,form,summary,h1,h2,h3,h4,h5,h6,header,label,ol,p,ul{padding:0;border:0;font:inherit;vertical-align:baseline}
 header{margin:2em 0 0}
 @media screen and (max-width:1600px) {
 header{margin:0}
@@ -40,11 +40,11 @@ a:before{-moz-transition:color .2s ease,text-shadow .2s ease;-webkit-transition:
 b,body,input,strong{color:#fff}
 em,i{font-style:italic}
 dl,form,form>.field,p{margin:0 0 1.5em}
-h1,h2,h3,h4,h5,h6{color:#fff;line-height:1.5}
+summary,h1,h2,h3,h4,h5,h6{color:#fff;line-height:1.5}
 h1{font-size:2em;letter-spacing:.22em;margin:0 0 .525em}
-h2,h3,h4,h5,h6{margin:0}
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:inherit;text-decoration:none}
-h2{font-size:1.25em}
+summary,h2,h3,h4,h5,h6{margin:0}
+summary,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:inherit;text-decoration:none}
+summary,h2{font-size:1.25em}
 h3,h4,h5,h6{font-size:1em}
 @media screen and (max-width:1600px) {
 h1{font-size:1.8em}
@@ -148,11 +148,10 @@ body.is-ie #wrapper{height:100%}
 @media screen and (max-width:1600px) {
 .menu{font-size:2em}
 }
-.top-bar{background:rgba(0,0,0,0);}
 a:active,a:link,a:visited{color:#ddd;text-decoration:none}
 a:hover{color:#666}
 #article{text-align:left;line-height:1.6em}
-#article>details{text-indent: 1em;font-size:16px; margin-bottom: 1em;}
+#article>details{font-size:16px; margin-bottom: 1em;}
 @media screen and (max-width:980px) {
-#article>details{text-indent: 1em;font-size:15px}
+#article>details{font-size:15px}
 }

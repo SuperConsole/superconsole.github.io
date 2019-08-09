@@ -1,6 +1,6 @@
 "use strict";
 
-class SideMenu extends React.Component {
+class ReactList extends React.Component {
     render() {
         return React.createElement(
             "table",
@@ -518,7 +518,7 @@ class ReactWrap extends React.Component {
 
 ReactDOM.render(React.createElement(MenuButton, null), document.getElementById("side-button"));
 
-ReactDOM.render(React.createElement(SideMenu, null), document.getElementById("side-menu"));
+ReactDOM.render(React.createElement(ReactList, null), document.getElementById("list"));
 
 ReactDOM.render(React.createElement(ReactWrap, null), document.getElementById("main"));
 
