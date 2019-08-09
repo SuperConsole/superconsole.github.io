@@ -1,4 +1,4 @@
-class SideMenu extends React.Component{
+class ReactList extends React.Component{
     render(){
         return(
             <table>
@@ -289,8 +289,8 @@ ReactDOM.render(
 
 
 ReactDOM.render(
-    <SideMenu />,
-    document.getElementById("side-menu")
+    <ReactList />,
+    document.getElementById("list")
 );
 
 ReactDOM.render(
