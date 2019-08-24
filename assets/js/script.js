@@ -42,7 +42,7 @@ class ReactList extends React.Component {
                         null,
                         React.createElement(
                             "a",
-                            { href: "#blog", id: "menuButton" },
+                            { href: "blog.superconsole.work", id: "menuButton" },
                             "Blog\u3000\u3000\u3000"
                         )
                     )
@@ -312,28 +312,6 @@ class ReactProfile extends React.Component {
     }
 }
 
-class ReactBlog extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            article: null
-        };
-        (async () => {
-            try {
-                var response = await fetch("https://raw.githubusercontent.com/SuperConsole/SpCn-Diary/master/Blog.md", { method: "GET" });
-                var responseText = await response.text();
-                var md = responseText;
-                var parseMd = marked(md);
-                this.setState({ article: parseMd });
-            } catch (e) {
-                console.log("failured");
-            }
-        })();
-    }
-    render() {
-        return React.createElement("div", { id: "article", dangerouslySetInnerHTML: { __html: this.state.article } });
-    }
-}
 class ReactDiary extends React.Component {
     constructor(props) {
         super(props);
@@ -463,9 +441,6 @@ class ReactWrap extends React.Component {
             case "#contact":
                 tmp = ReactContact;
                 break;
-            case "#blog":
-                tmp = ReactBlog;
-                break;
             case "#diary":
                 tmp = ReactDiary;
                 break;
@@ -497,9 +472,6 @@ class ReactWrap extends React.Component {
                 break;
             case '#diary':
                 tmp = ReactDiary;
-                break;
-            case '#blog':
-                tmp = ReactBlog;
                 break;
             case '#home':
                 tmp = ReactMain;
