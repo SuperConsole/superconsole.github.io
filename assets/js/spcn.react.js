@@ -10,7 +10,7 @@ class ReactList extends React.Component{
                         <td><a href="#profile" id="menuButton">Profile　　　</a></td>
                     </tr>
                     <tr>
-                        <td><a href="blog.superconsole.work">Blog　　　</a></td>
+                        <td><a href="blog.superconsole.work" id="menuButton">Blog　　　</a></td>
                     </tr>
                     <tr>
                         <td><a href="#diary" id="menuButton">Diary　　　</a></td>
