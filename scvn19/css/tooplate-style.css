@@ -9,11 +9,12 @@ http://www.tooplate.com/view/2100-artist
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700|Playfair+Display');
 
 body {
-    background: rgba(0,0,0,0);
-    font-family: 'Nunito Sans', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    overflow-x: hidden;
+  background: url(../images/book-bg.jpg);
+  background-size: cover;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -21,12 +22,40 @@ html, body {
   height: 100%;
 }
 
+header{
+  opacity: 1;
+  z-index: 10;
+  position: fixed;
+  top:0;
+  padding:15px;
+  width: 100%;
+  height:55px;
+}
+
+.header-container{
+  margin-left:-10px;
+  top: -10px;
+  overflow: hidden;
+}
+
+#top-left-logo-bg{
+  opacity: 1;
+  position: fixed;
+  width:13%;
+  height:auto;
+  fill:#252525;
+  vertical-align: top;
+}
+
 .container{
     background: rgba(200,200,200,0) !important;
+    width: 100%;
+    height:100%;
 }
 
 .container-work{
     margin-top: 5em;
+    height: auto;
 }
 
 @media (max-width: 1600px) {
@@ -36,15 +65,14 @@ html, body {
 }
 
 #conHome{
-    margin: 0 !important;
+    margin: 0 auto!important;
 }
 #punch{
     color:#252525;
     font-size: 30px;
     text-align: center;
     letter-spacing: 10px;
-    margin-top: 1em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 @media (max-width: 1600px) {
     #punch{
@@ -117,8 +145,6 @@ strong, span {
 -----------------------------------------*/
 
 .arrow-btn i {
-  background: #25252525;
-  border-radius: 50%;
   color: #252525;
   font-size: 20px;
   width: 50px;
@@ -180,17 +206,20 @@ a:hover, a:active, a:focus {
 }
 
 .parallax-section {
-  background-attachment: fixed !important;
   background-size: cover !important;
 }
 
 #about, #work,
 #contact {
   position: relative;
-  padding-top: 1em;
+  padding-top: 2em;
   padding-bottom: 1em;
 }
 
+.work-about{
+  width:100%;
+  text-align: center;
+}
 
 /*---------------------------------------
   Pre loader section
@@ -207,10 +236,7 @@ a:hover, a:active, a:focus {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background: none repeat scroll 0 0 #ece3d6;
-  background: -webkit-linear-gradient(left, #ece3d6, #e7d3b8);
-  background: -o-linear-gradient(left, #ece3d6, #e7d3b8);
-  background: linear-gradient(to right, #ece3d6, #e7d3b8);
+  background: none repeat scroll 0 0 #e7d3b8;
 }
 
 .spinner {
@@ -228,13 +254,11 @@ a:hover, a:active, a:focus {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 60px;
-  height: 60px;
-  margin-top: -10px;
-  margin-left: -10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 1px solid #252525;
-  border-top-color: #252525;
+  border-top-color: #fff;
   animation: spinner .9s linear infinite;
 }
 
@@ -251,30 +275,31 @@ a:hover, a:active, a:focus {
   Home section
 -----------------------------------------*/
 
+.row{
+  height:100% !important;
+}
+
 #home {
+  position: relative;
   background: url('../images/home-wrap-bg.jpg');
   background-size: cover;
   background-position: bottom 0px right 0px;
-  border-radius: 5px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  align-items: center;
+  width:86%;
+  height: 100%;
+  margin: 0 auto;
+  margin-right: 0;
   text-align: center;
-  position: relative;
 }
 
 .home-wrapper {
-    opacity: 0.78;
-    background: #ece3d6;
-    background: -webkit-linear-gradient(left, #ece3d6, #e7d3b8);
-    background: -o-linear-gradient(left, #ece3d6, #e7d3b8);
-    background: linear-gradient(to right, #ece3d6, #e7d3b8);
+    opacity: 1;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
@@ -292,13 +317,11 @@ a:hover, a:active, a:focus {
     background: url('../images/home-bg.jpg');
     background-size: cover;
     background-position: bottom 0px right 0px;
-    height:100vh;
-    padding-top: 100px;
-}
-@media (max-width: 1600px) {
-    #about {
-        padding-top: 0px;
-    }
+    width:86%;
+    height:100%;
+    margin: 0 auto;
+    margin-right: 0;
+    padding-top: 4em;
 }
 
 #about .col-md-4 img {
@@ -321,42 +344,33 @@ a:hover, a:active, a:focus {
 }
 
 #about .about-thumb {
-    opacity: 0.78;
-    background: #ece3d6;
-    background: -webkit-linear-gradient(left, #ece3d6, #e7d3b8);
-    background: -o-linear-gradient(left, #ece3d6, #e7d3b8);
-    background: linear-gradient(to right, #ece3d6, #e7d3b8);
+  opacity: 1;
   border-radius: 5px;
   padding: 42px 32px;
 }
 
 #SC-frame{
-    width:100%;
-    height:480px;
+  width:90%;
+  height:80%;
 }
 
 @media (max-width: 980px) {
   #SC-frame {
-    height: 100%;
+    height: 300px;
   }
 
 }
 
 .DLCard{
     color:#252525;
-    opacity: 0.81;
-    background: #555;
-    background: -webkit-linear-gradient(left, #ece3d6, #e7d3b8);
-    background: -o-linear-gradient(left, #ece3d6, #e7d3b8);
-    background: linear-gradient(to right, #ece3d6, #e7d3b8);
-}
-
-.DLCard:hover{
-    background: #ece3d6;
 }
 
 .table{
     color: #252525;
+}
+
+table.tracks td{
+  padding-bottom: 1.5em !important;
 }
 
 table.tracks tr:hover{
@@ -369,6 +383,11 @@ table.tracks tr:nth-child(1):hover{
     cursor: auto;
 }
 
+table.tracks tr:nth-child(7):hover{
+  background-color: rgba(0,0,0,0);
+  cursor: auto;
+}
+
 table.tracks tr:active{
     background-color: #e7d3b8;
     cursor: pointer;
@@ -379,14 +398,22 @@ table.tracks tr:nth-child(1):active{
     cursor: auto;
 }
 
+table.tracks tr:nth-child(7):active{
+  background-color: rgba(0,0,0,0);
+  cursor: auto;
+}
+
 /*---------------------------------------
   Credit section
 -----------------------------------------*/
 
 #work {
-    opacity: 1;
-    background: url(../images/jacket_blur.jpg);
-  height: 100vh;
+  opacity: 1;
+  background: url(../images/jacket_blur.jpg);
+  width: 86%;
+  height: 100%;
+  margin: 0 auto;
+  margin-right: 0;
 }
 
 td{
@@ -394,10 +421,6 @@ td{
     font-weight: bold;
     border-top: none !important;
     border-left: solid 2px #e0c7a4;
-}
-
-@media (max-width: 1300px){
-
 }
 /*---------------------------------------
   Mobile Responsive styles
@@ -422,7 +445,7 @@ td{
  }
 
  #work {
-   height: 100vh;
+   height: 100%;
  }
 
  #work .work-thumb {
@@ -437,7 +460,7 @@ td{
      background: url('../images/home-bg.jpg');
      background-size: cover;
      background-position: bottom 200px right 200px;
-     height: 100vh;
+     height: 100%;
      padding-top: 5px;
  }
 }
@@ -461,7 +484,7 @@ td{
       background: url('../images/home-bg.jpg');
       background-size: cover;
       background-position: bottom 200px right 200px;
-      height: 100vh;
+      height: 100%;
       padding-top: 5px;
   }
 }
@@ -486,15 +509,13 @@ td{
   #about {
       background: url('../images/home-bg.jpg');
       background-size: cover;
-      background-position: bottom 200px right 200px;
-      height: 100vh;
-      padding-top: 5px;
+      height: 100%;
   }
 }
 
 @media (max-width: 360px) {
   #home {
-    height: 100vh;
+    height: 100%;
   }
 
 }
