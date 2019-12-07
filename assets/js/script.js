@@ -55,7 +55,7 @@ class ReactList extends React.Component {
                         null,
                         React.createElement(
                             "a",
-                            { href: "https://blog.superconsole.work", id: "menuButton" },
+                            { href: "https://diary.superconsole.work", id: "menuButton" },
                             "Diary\u3000\u3000\u3000"
                         )
                     )
